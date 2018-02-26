@@ -1,0 +1,26 @@
+{
+    "name": "vadiasov/albums-admin",
+    "description": "Laravel package to create DB table albums and to serve CRUD pages in administrative panel for it.",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "author": {
+        "name": "Volodymyr Vadiasov ",
+        "email": "vadiasov.volodymyr@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vadiasov\\AlbumsAdmin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vadiasov\\AlbumsAdmin\\AlbumsAdminServiceProvider"
+            ]
+        }
+    }
+}
