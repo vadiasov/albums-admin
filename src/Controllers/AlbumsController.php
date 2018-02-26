@@ -66,9 +66,7 @@ class AlbumsController extends Controller
      */
     public function store(AlbumRequest $request)
     {
-        $date          = $request->release_date;
-        $array         = explode('-', $date);
-        $dateFormatted = $array[2] . '-' . $array[1] . '-' . $array[0];
+        $dateFormatted = date_inverse('-', $request->release_date);
         
         $album = new Album([
             'artist_id'    => $request->artist_id,
@@ -102,9 +100,11 @@ class AlbumsController extends Controller
         $genres         = Genre::all()->keyBy('id');
         $artists        = Artist::all()->keyBy('id');
         
-        $date                = $album->release_date;
-        $array               = explode('-', $date);
-        $album->release_date = $array[2] . '-' . $array[1] . '-' . $array[0];
+//        $date                = $album->release_date;
+//        $array               = explode('-', $date);
+//        $album->release_date = $array[2] . '-' . $array[1] . '-' . $array[0];
+        $album->release_date = date_inverse('-', $album->release_date);
+        
         
         $arrayJs = '[' . implode(",", $genresSelected) . ']';
         
@@ -130,9 +130,7 @@ class AlbumsController extends Controller
     {
         $album = Album::whereId($id)->first();
         
-        $date          = $request->release_date;
-        $array         = explode('-', $date);
-        $dateFormatted = $array[2] . '-' . $array[1] . '-' . $array[0];
+        $dateFormatted = date_inverse('-', $request->release_date);
         
         $album->title        = $request->title;
         $album->artist_id    = $request->artist_id;

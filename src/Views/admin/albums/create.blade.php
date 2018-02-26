@@ -227,12 +227,13 @@
             $('.select2').select2();
 
             //Datemask dd/mm/yyyy
-            $('#datepicker').inputmask('dd-mm-yyyy', {'placeholder': 'dd-mm-yyyy'});
+//            $('#datepicker').inputmask('dd-mm-yyyy', {'placeholder': 'dd-mm-yyyy'});
             //Datemask2 mm/dd/yyyy
-            $('#datemask2').inputmask('mm/dd/yyyy', {'placeholder': 'mm/dd/yyyy'});
+//            $('#datemask2').inputmask('mm/dd/yyyy', {'placeholder': 'mm/dd/yyyy'});
 
             //Date picker
             $('#datepicker').datepicker({
+                format: 'dd-mm-yyyy',
                 autoclose: true
             });
 

@@ -20,21 +20,24 @@ class AlbumsAdminServiceProvider extends ServiceProvider
 
 //        $this->publishes([__DIR__.'/Config/albums-admin.php' => config_path('albums-admin.php'),]);
 //        $this->publishes([__DIR__ . '/Translations' => resource_path('lang/vadiasov/albums-admin'),]);
-        $this->publishes([__DIR__ . '/Views' => resource_path('views/vadiasov/admin/albums-admin'),]);
+        $this->publishes([
+            __DIR__ . '/Views'      => resource_path('views/vadiasov/admin/albums-admin'),
+            __DIR__ . '/Migrations' => database_path('migrations'),
+        ]);
 //        $this->publishes([__DIR__ . '/Assets' => public_path('vadiasov/admin/albums-admin'),], 'albums_admin_assets');
-    
+        
         $this->loadRoutesFrom(__DIR__ . '/Routes/web.php');
         $this->loadMigrationsFrom(__DIR__ . '/Migrations');
         $this->loadTranslationsFrom(__DIR__ . '/Translations', 'albums-admin');
         $this->loadViewsFrom(__DIR__ . '/Views', 'albums-admin');
-    
+        
         if ($this->app->runningInConsole()) {
             $this->commands([
                 \Vadiasov\AlbumsAdmin\Commands\AlbumsAdminCommand::class,
             ]);
         }
     }
-
+    
     /**
      * Register the application services.
      *
