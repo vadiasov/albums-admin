@@ -8,6 +8,7 @@ return [
     ],
     'path'     => '/app/public/tracks/',
     'db_table' => 'tracks',
+    'id_item'  => 'album_id',
     'column'   => 'file',
-    'backUrl'   => 'admin/albums',
+    'backUrl'  => 'admin/albums',
 ];

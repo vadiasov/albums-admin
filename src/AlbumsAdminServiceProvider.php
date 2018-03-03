@@ -18,11 +18,11 @@ class AlbumsAdminServiceProvider extends ServiceProvider
     {
         $router->aliasMiddleware('albums-admin', \Vadiasov\AlbumsAdmin\Middleware\AlbumsAdminMiddleware::class);
 
-//        $this->publishes([__DIR__.'/Config/albums-admin.php' => config_path('albums-admin.php'),]);
 //        $this->publishes([__DIR__ . '/Translations' => resource_path('lang/vadiasov/albums-admin'),]);
         $this->publishes([
             __DIR__ . '/Views'      => resource_path('views/vadiasov/admin/albums-admin'),
             __DIR__ . '/Migrations' => database_path('migrations'),
+            __DIR__ . '/Config/albums-admin.php' => config_path('albums-admin.php')
         ]);
 //        $this->publishes([__DIR__ . '/Assets' => public_path('vadiasov/admin/albums-admin'),], 'albums_admin_assets');
         
