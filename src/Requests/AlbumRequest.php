@@ -24,14 +24,14 @@ class AlbumRequest extends FormRequest
     public function rules()
     {
         return [
-            'artist_id' => ['required'],
-            'title' => ['required', 'regex:/^[a-zA-Z\-\' ]+$/u'],
+            'artist_id'    => ['required'],
+            'title'        => ['required', 'regex:/^[a-zA-Z\-\' ]+$/u'],
             'release_date' => ['required'],
-            'price' => ['required', 'between:0,999.99'],
-            'free' => ['required', 'string', 'size:1'],
-            'donate' => ['required', 'string', 'size:1'],
-            'genres' => ['required', 'array'],
-            'editor1' => ['required'],
+            'price'        => ['required', 'between:0,999.99'],
+            'free'         => ['required', 'string', 'size:1'],
+            'donate'       => ['required', 'string', 'size:1'],
+            'genres'       => ['required', 'array'],
+            'editor1'      => ['required'],
         ];
     }
 }
