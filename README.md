@@ -28,7 +28,7 @@ Create model:
 ````
 php artisan make:model Album
 ````
-Publish migrations and seeds. Run:
+Publish config, migrations and seeds. Run:
 ````
 php artisan vendor:publish
 ````
