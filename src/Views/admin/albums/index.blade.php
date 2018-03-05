@@ -65,7 +65,7 @@
                                         <td>{{ $album->created_at }}</td>
                                         <td>{{ $album->updated_at }}</td>
                                         <td>
-                                            <a href="{{action('\Vadiasov\Upload\Controllers\UploadController@upload', ['albums-admin', $album->id])}}"
+                                            <a href="{{action('\Vadiasov\Upload\Controllers\UploadController@upload', ['albumsAdmin', $album->id])}}"
                                                 title="Add Tracks">
                                                 <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                             <a href="{{action('\Vadiasov\AlbumsAdmin\Controllers\AlbumsController@edit', $album->id)}}">
