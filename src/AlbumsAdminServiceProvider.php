@@ -47,7 +47,6 @@ class AlbumsAdminServiceProvider extends ServiceProvider
     {
         $this->app->make('Vadiasov\AlbumsAdmin\Controllers\AlbumsController');
         $this->app->make('Vadiasov\AlbumsAdmin\Requests\AlbumRequest');
-        $this->app->make('Vadiasov\AlbumsAdmin\Requests\AlbumRequest');
         $this->mergeConfigFrom(
             __DIR__ . '/Config/albumsAdmin.php', 'albumsAdmin'
         );

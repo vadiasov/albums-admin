@@ -68,6 +68,8 @@
                                             <a href="{{action('\Vadiasov\Upload\Controllers\UploadController@upload', ['albumsAdmin', $album->id])}}"
                                                 title="Add Tracks">
                                                 <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                            <a href="{{action('\Vadiasov\TracksAdmin\Controllers\TracksController@index', $album->id)}}">
+                                                <i class="fa fa-music" aria-hidden="true"></i></a>
                                             <a href="{{action('\Vadiasov\AlbumsAdmin\Controllers\AlbumsController@edit', $album->id)}}">
                                                 <i class="fa fa-pencil" aria-hidden="true"></i></a>
                                             <a href="{{action('\Vadiasov\AlbumsAdmin\Controllers\AlbumsController@destroy', $album->id)}}">
