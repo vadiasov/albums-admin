@@ -52,6 +52,8 @@
                                     <th>Release</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
+                                    <th>Add Tracks</th>
+                                    <th>Add Arts</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -68,8 +70,17 @@
                                             <a href="{{action('\Vadiasov\Upload\Controllers\UploadController@upload', ['albumsAdmin', $album->id])}}"
                                                 title="Add Tracks">
                                                 <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="{{action('\Vadiasov\Upload\Controllers\UploadController@upload3', ['artsAdmin', $album->id])}}"
+                                                title="Add Arts">
+                                                <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                        </td>
+                                        <td>
                                             <a href="{{action('\Vadiasov\TracksAdmin\Controllers\TracksController@index', $album->id)}}">
                                                 <i class="fa fa-music" aria-hidden="true"></i></a>
+                                            <a href="{{action('\Vadiasov\ArtsAdmin\Controllers\ArtsController@index', $album->id)}}">
+                                                <i class="fa fa-file-image-o" aria-hidden="true"></i></a>
                                             <a href="{{action('\Vadiasov\AlbumsAdmin\Controllers\AlbumsController@edit', $album->id)}}">
                                                 <i class="fa fa-pencil" aria-hidden="true"></i></a>
                                             <a href="{{action('\Vadiasov\AlbumsAdmin\Controllers\AlbumsController@destroy', $album->id)}}">
@@ -86,6 +97,8 @@
                                     <th>Release</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
+                                    <th>Add Tracks</th>
+                                    <th>Add Arts</th>
                                     <th>Actions</th>
                                 </tr>
                                 </tfoot>
